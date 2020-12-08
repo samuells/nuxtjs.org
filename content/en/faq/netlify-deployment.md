@@ -33,7 +33,7 @@ Press the _"New site from Git"_ button on the Netlify dashboard. Authenticate wi
 ### For site generated in SPA mode
 
 1. **Branch to deploy:** `master`, or which-ever branch you prefer
-1. **Build command:** `npm run build`
+1. **Build command:** `npm run generate --spa`
 1. **Publish directory:** `dist`
 
 For a single page app there is a problem with refresh as by default on netlify the site redirects to _"404 not found"_. For any pages that are not generated they will fallback to SPA mode and then if you refresh or share that link you will get Netlify's 404 page. This is because the pages that are not generated don't actually exist as they are actually a single page application so if you refesh this page you will get a 404 because the url for that page doesn't actually exist. By redirecting to the 404.html Nuxt will reload your page correctly in SPA fallback.
